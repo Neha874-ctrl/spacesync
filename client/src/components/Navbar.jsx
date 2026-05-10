@@ -6,7 +6,7 @@ import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-function Navbar({ isChatOpen }) {
+function Navbar({ isChatOpen, onOpenAIAssistant }) {
   return (
     <div
       className={`
@@ -79,7 +79,7 @@ function Navbar({ isChatOpen }) {
           <span>Templates</span>
         </button>
 
-        <button className="nav-btn">
+        <button onClick={onOpenAIAssistant} className="nav-btn">
           <AutoAwesomeOutlinedIcon sx={{ fontSize: '1.25em' }} />
           <span>AI Assistant</span>
         </button>

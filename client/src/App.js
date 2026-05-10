@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar";
 import ChatPanel from "./components/ChatPanel";
 import DetailsPanel from "./components/DetailsPanel";
 import PreviewPanel from "./components/PreviewPanel";
+import AIAssistant from "./components/AIAssistant";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(true);
+  const [isAIAssistantOpen, setIsAIAssistantOpen] = useState(false);
 
   return (
     <div className="flex h-screen bg-[#F5F1EB] text-[#1F1B16]">
@@ -41,7 +43,7 @@ function App() {
               <ChevronRightIcon />
             </button>
           )}
-          <Navbar isChatOpen={isChatOpen} />
+          <Navbar isChatOpen={isChatOpen} onOpenAIAssistant={() => setIsAIAssistantOpen(true)} />
         </div>
 
         {/* Center Content */}
@@ -55,6 +57,9 @@ function App() {
 
         </div>
       </div>
+
+      {/* Modals */}
+      <AIAssistant open={isAIAssistantOpen} setOpen={setIsAIAssistantOpen} />
 
     </div>
   );

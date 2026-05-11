@@ -4,7 +4,7 @@ function PreviewPanel({ isChatOpen }) {
       className={`
         flex-1
         min-w-[500px]
-        ${isChatOpen ? 'max-w-[1280px]' : 'max-w-none'}
+        ${isChatOpen ? 'max-w-[1290px]' : 'max-w-none'}
         h-[88vh]
         min-h-[544px]
         max-h-[817px]

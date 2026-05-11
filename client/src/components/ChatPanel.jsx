@@ -3,22 +3,22 @@ function ChatPanel({ isOpen, onClose }) {
   return (
     <div className={`
       flex-shrink-0
-      h-[97vh]
+      h-[calc(100vh-1.5rem)]
       min-h-[600px]
-      max-h-[900px]
+      max-h-[880px]
       bg-white
       dark:dark-panel-bg
       flex
       flex-col
       overflow-hidden
       transition-all duration-300 ease-in-out
-      ${isOpen 
-        ? "w-[20vw] min-w-[260px] max-w-[380px] m-3 border border-[#E7DED3] dark:border-[#2A2A2A] opacity-100 shadow-sm" 
+      ${isOpen
+        ? "w-[20vw] min-w-[260px] max-w-[380px] m-3 rounded-[32px] border border-[#E7DED3]/40 dark:border-[#2A2A2A]/50 opacity-100 shadow-sm"
         : "w-0 min-w-0 max-w-0 m-0 border-0 opacity-0"}
     `}>
 
       {/* Header */}
-      <div className="px-6 py-5 border-b border-[#E7DED3] dark:border-[#222222]">
+      <div className="px-6 py-5 border-b border-[#E7DED3]/40 dark:border-[#222222]/50">
 
         <div className="flex items-center justify-between">
 
@@ -40,11 +40,14 @@ function ChatPanel({ isOpen, onClose }) {
             w-9
             h-9
             rounded-full
+            flex
+            items-center
+            justify-center
             bg-white
             dark:bg-[#1A1A1A]
             border
-            border-[#E7DED3]
-            dark:border-[#222222]
+            border-[#E7DED3]/40
+            dark:border-[#222222]/50
             text-[#8A8178]
             dark:text-[#A0A0A0]
             hover:bg-[#F5F1EB]
@@ -102,7 +105,7 @@ function ChatPanel({ isOpen, onClose }) {
       </div>
 
       {/* Input Section */}
-      <div className="p-4 border-t border-[#E7DED3] dark:border-[#222222]">
+      <div className="p-4 border-t border-[#E7DED3]/40 dark:border-[#222222]/50">
 
         <div className="flex items-center gap-3">
 

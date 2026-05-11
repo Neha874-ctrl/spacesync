@@ -11,10 +11,10 @@ function Templates() {
   const scroll = (direction) => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo = direction === 'left' 
-        ? scrollLeft - clientWidth / 2 
+      const scrollTo = direction === 'left'
+        ? scrollLeft - clientWidth / 2
         : scrollLeft + clientWidth / 2;
-      
+
       scrollRef.current.scrollTo({
         left: scrollTo,
         behavior: 'smooth'
@@ -113,13 +113,13 @@ function Templates() {
 
         {/* Gallery Section with Side Arrows */}
         <div className="relative flex-1 mt-10 group overflow-hidden">
-          
+
           <h3 className="text-2xl font-bold text-[#1F1B16] dark:text-[#FFFFFF] mb-6">
             Trending Templates
           </h3>
 
           {/* Left Arrow */}
-          <button 
+          <button
             onClick={() => scroll('left')}
             className="
               absolute 
@@ -152,7 +152,7 @@ function Templates() {
           </button>
 
           {/* Right Arrow */}
-          <button 
+          <button
             onClick={() => scroll('right')}
             className="
               absolute 
@@ -185,7 +185,7 @@ function Templates() {
           </button>
 
           {/* Horizontal Gallery */}
-          <div 
+          <div
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto pb-8 custom-scrollbar scroll-smooth no-scrollbar"
           >

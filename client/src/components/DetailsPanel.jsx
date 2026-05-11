@@ -3,7 +3,7 @@ function DetailsPanel({ isChatOpen }) {
     <div
       className={`
         flex-shrink-0
-        ${isChatOpen ? 'w-[360px]' : 'w-[25vw] min-w-[360px] max-w-[600px]'}
+        ${isChatOpen ? 'w-[360px]' : 'w-[25vw] min-w-[380px] max-w-[600px]'}
         h-[88vh]
         min-h-[544px]
         max-h-[817px]

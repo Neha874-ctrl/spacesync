@@ -18,12 +18,15 @@ function PreviewPanel({ isChatOpen }) {
         className="
           h-full
           bg-white
+          dark:dark-panel-bg
           border
           border-[#E7DED3]
+          dark:border-[#2A2A2A]
           rounded-[32px]
           p-6
           flex
           flex-col
+          shadow-sm
         "
       >
 
@@ -33,7 +36,7 @@ function PreviewPanel({ isChatOpen }) {
           {/* Left */}
           <div>
 
-            <h1 className="text-[32px] font-bold text-[#1F1B16]">
+            <h1 className="text-[32px] font-bold text-[#1F1B16] dark:text-[#FFFFFF]">
               Modern Minimalist Bedroom
             </h1>
 
@@ -79,7 +82,11 @@ function PreviewPanel({ isChatOpen }) {
             rounded-[30px]
             overflow-hidden
             bg-[#F5F1EB]
+            dark:bg-[#050505]
             relative
+            border
+            border-transparent
+            dark:border-[#2A2A2A]
           "
         >
 
@@ -126,7 +133,7 @@ function PreviewPanel({ isChatOpen }) {
             />
           </div>
 
-          <div className="thumbnail">
+          <div className="thumbnail dark:border-[#222222]">
             <img
               src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=400&auto=format&fit=crop"
               alt=""
@@ -134,7 +141,7 @@ function PreviewPanel({ isChatOpen }) {
             />
           </div>
 
-          <div className="thumbnail">
+          <div className="thumbnail dark:border-[#222222]">
             <img
               src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=400&auto=format&fit=crop"
               alt=""
@@ -142,7 +149,7 @@ function PreviewPanel({ isChatOpen }) {
             />
           </div>
 
-          <div className="thumbnail">
+          <div className="thumbnail dark:border-[#2A2A2A]">
             <img
               src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=400&auto=format&fit=crop"
               alt=""
